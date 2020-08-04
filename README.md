@@ -9,7 +9,9 @@
 2. `#!/bin/bash`的意思是下面的内容是bash脚本,使用 `/bin/bash`命令去执行
 
 3. 执行脚本的两种方式:
+
 3.1 `cd`到脚本所在的目录中,执行`./01.sh` 为什么一定要加上`./`去执行脚本,因为如果不加就只会再`/bin, /sbin, /usr/bin，/usr/sbin` 这些地方去找该脚本,如果遇到没有权限,可以先执行`chmod +x 01.sh`再执行
+
 3.2 `/bin/bash ./bash_script/code/01.sh` 先指定执行的命令 参数是脚本的地址
 
 
@@ -26,6 +28,7 @@
 `echo ${my_name}`
 
 4. 创建只读变量关键字 `readonly`
+
 `myUrl="www.google.com" readonly myUrl`
 
 5. 删除变量,使用关键字 `unset`,但删除的时候不能删除只读变量
@@ -53,7 +56,9 @@ echo ${name:1:4} #hang
 9. 只支持一维数组
 
 10. 申明方式 
+
 10.1 `array_name=(value0 value1 value2 value3)`
+
 10.2 `array_name[0]=value0 array_name[1]=value1 array_name[n]=valueN`
 
 11. 读取方式 ${数组名[下标]}
@@ -396,7 +401,6 @@ fi
 ```
 
 #### 流程控制
-`if else`
 1. `if else`
 直接看例子:
 ```bash
@@ -416,7 +420,7 @@ else
 fi
 ```
 
-`for in`
+2. `for in`
 例子:
 ```bash
 for loop in 1 2 3 4 5
@@ -425,7 +429,7 @@ do
 done
 ```
 
-`while`
+3. `while`
 例子:
 ```bash
 int=0
@@ -436,7 +440,7 @@ int=`expr ${int} + 1`
 done    
 ```
 
-`case` 语法中的`;;`表示的意思和`break`相同
+4. `case` 语法中的`;;`表示的意思和`break`相同
 语法
 ```bash
 case 值 in
